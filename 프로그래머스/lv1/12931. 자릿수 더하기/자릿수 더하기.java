@@ -2,19 +2,19 @@ import java.util.*;
 
 public class Solution {
     public int solution(int n) {
-        String str = String.valueOf(n);
-        int result = 0;
+        int answer = 0;
 
-        for(int i=0; i<str.length(); i++) {
-            result += Integer.parseInt(String.valueOf(str.charAt(i)));
+        while(true){
+            answer+=n%10;
+            if(n<10)
+                break;
+
+            n=n/10;
         }
 
-        return result;
-    }
-    
-    public static void main(String[] args){
-        Solution s = new Solution();
-        int num = 123;
-        System.out.println(s.solution(num));
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+        System.out.println("Hello Java");
+
+        return answer;
     }
 }
